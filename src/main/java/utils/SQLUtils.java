@@ -1,4 +1,4 @@
-package repository;
+package utils;
 
 public class SQLUtils {
     public  static class PersonSQL{
