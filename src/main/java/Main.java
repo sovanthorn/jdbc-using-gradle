@@ -47,6 +47,13 @@ public class Main {
             option = input.nextInt();
 
             switch (option) {
+                case 1 :
+                {
+                    input.nextLine();
+                    personService.createPerson(new Person().addPerson(input));
+
+
+                } break;
                 case 2: {
                     int showOption;
                     List<String> showMenu = new ArrayList<>(List.of(
@@ -61,6 +68,7 @@ public class Main {
 
                         switch (showOption) {
                             case 1:
+
                                 TableUtils.renderObjectToTable(personService.getAllPerson());
                                 break;
                             case 2:

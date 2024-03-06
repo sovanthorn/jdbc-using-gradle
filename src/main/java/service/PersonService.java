@@ -32,4 +32,8 @@ public class PersonService {
                 )
                 .toList();
     }
+
+    public int createPerson(Person person ){
+        return personRepository.addNewPerson(person);
+    }
 }
