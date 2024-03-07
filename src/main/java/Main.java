@@ -3,6 +3,7 @@ import model.Person;
 import repository.PersonRepository;
 import service.PersonService;
 import utils.TableUtils;
+import view.MainView;
 
 import java.util.*;
 import java.util.concurrent.ThreadFactory;
@@ -35,23 +36,11 @@ import java.util.concurrent.ThreadFactory;
 public class Main {
     private static PersonService personService =
             new PersonService(new PersonRepository());
-
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int option;
-
-        List<String> mainMenu = new ArrayList<>(List.of(
-                "Add New Person ",
-                "Update Person ",
-                "Delete Person",
-                "Show Person Information",
-                "Search",
-                "Exit"));
         do {
-            TableUtils.renderMenu(mainMenu, "Person Management System");
-            System.out.print("Enter your option : ");
-            option = input.nextInt();
-
+            option = MainView.renderMain(input);
             switch (option) {
                 case 1: {
                     input.nextLine(); // clear buffer
@@ -94,6 +83,7 @@ public class Main {
                         TableUtils.renderMenu(showMenu, "Show Person Information");
                         System.out.print("Choose your option: ");
                         showOption = input.nextInt();
+
 
                         switch (showOption) {
                             case 1:
@@ -168,7 +158,7 @@ public class Main {
                     System.out.println("Invalid Option!!!!!! ");
                     break;
             }
-        } while (option != mainMenu.size());
+        } while (option != 6);
 
 
     }
