@@ -36,6 +36,7 @@ import java.util.concurrent.ThreadFactory;
 public class Main {
     private static PersonService personService =
             new PersonService(new PersonRepository());
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int option;
@@ -45,9 +46,9 @@ public class Main {
                 case 1: {
                     input.nextLine(); // clear buffer
                     System.out.println(
-                            personService.createPerson(input)>0?
+                            personService.createPerson(input) > 0 ?
                                     "Successfully Created a New Person"
-                                    :""
+                                    : ""
                     );
 
                 }
@@ -59,8 +60,6 @@ public class Main {
                                     "Successfully Update Person Info"
                                     : ""
                     );
-
-
                 }
                 break;
                 case 3: {
