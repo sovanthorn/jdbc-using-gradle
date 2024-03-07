@@ -1,5 +1,6 @@
 import java.sql.*;
 
+@Deprecated
 public class DatabaseBasicDemo {
     public static void main(String[] args) {
         String databaseUrl="jdbc:postgresql://localhost:5432/javafinaldb";

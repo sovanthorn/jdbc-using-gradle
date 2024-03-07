@@ -12,9 +12,7 @@ import java.util.List;
 import java.util.Properties;
 import java.util.Random;
 
-@Slf4j
 public class PersonRepository {
-
     private final Properties properties;
 
     public PersonRepository() {
