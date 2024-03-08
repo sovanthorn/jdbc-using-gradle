@@ -3,9 +3,9 @@ import java.sql.*;
 @Deprecated
 public class DatabaseBasicDemo {
     public static void main(String[] args) {
-        String databaseUrl="jdbc:postgresql://localhost:5432/javafinaldb";
+        String databaseUrl="jdbc:postgresql://167.172.67.84:5433/postgres";
         String username="postgres";
-        String password="postgres@2023";
+        String password="root@123";
 
         String getAllPersonSQL= """
                 SELECT * FROM person_tb;

@@ -8,10 +8,10 @@ build/
 !**/src/test/**/build/
 
 ### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
+gradle/.idea/modules.xml
+gradle/.idea/jarRepositories.xml
+gradle/.idea/compiler.xml
+gradle/.idea/libraries/
 *.iws
 *.iml
 *.ipr
